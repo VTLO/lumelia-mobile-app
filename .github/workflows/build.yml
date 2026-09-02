@@ -38,15 +38,21 @@ jobs:
           distribution: 'zulu'
           java-version: '21'
 
-      - name: Gradle
-        uses: gradle/actions/setup-gradle@v4
-        run: |
-        ./' android/gradlew
-           chmod +x android/gradlew
+      # Install Android SDK / build tools (required to build an Android APK).
+      # Use an action that provisions the SDK. Example using the emulator-runner (it installs SDK components).
+      - name: Setup Android SDK (install required build-tools & platforms)
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 33
+          arch: x86_64
+          force-avd-creation: false
+
+      - name: Make gradlew executable
+        run: chmod +x android/gradlew
 
       - name: Assemble debug
         working-directory: android
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --no-daemon
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
