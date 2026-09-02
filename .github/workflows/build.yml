@@ -40,8 +40,9 @@ jobs:
 
       - name: Gradle
         uses: gradle/actions/setup-gradle@v4
-        run: | sed -i 's/\r$//' android/gradlew
-          chmod +x android/gradlew
+        run: |
+        ./' android/gradlew
+           chmod +x android/gradlew
 
       - name: Assemble debug
         working-directory: android
