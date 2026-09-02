@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Maison Lum\u00e9lia",
+    "slug": "maison-lumelia-bijoux",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#141414",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "fr.maisonlumelia.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#141414"
+      },
+      "package": "fr.maisonlumelia.app"
+    }
+  }
+}

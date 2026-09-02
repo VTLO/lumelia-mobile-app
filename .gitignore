@@ -1,0 +1,33 @@
+node_modules/
+.expo/
+dist/
+web-build/
+
+# Android build & caches
+android/app/build/
+android/.gradle/
+android/build/
+android/local.properties
+android/*.iml
+android/app/*.iml
+android/.idea/
+
+# iOS
+ios/build/
+ios/Pods/
+ios/*.xcworkspace
+
+# Secrets & Keys
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
